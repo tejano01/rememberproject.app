@@ -1,43 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+  <meta charset="UTF-8">
+  <title>Remember Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Remember Project&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Grab the full URL including fragment (#) and query params</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const hash = window.location.hash;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const search = window.location.search;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Build the deep link for the app</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const deepLink = "rememberproject://auth/callback" + search + hash;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Try to open the app</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.location.href = deepLink;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// Fallback after 2 seconds if app isn't installed</p>
-<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(function() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.body.innerHTML = '&lt;p style="font-family:sans-serif;text-align:center;margin-top:40px;"&gt;Opening Remember Project...&lt;/p&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}, 2000);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p style="font-family:sans-serif;text-align:center;margin-top:40px;"&gt;Opening Remember Project...&lt;/p&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <script>
+    const hash = window.location.hash;
+    const search = window.location.search;
+
+    const deepLink = "rememberproject://auth/callback" + search + hash;
+
+    window.location.href = deepLink;
+
+    setTimeout(function() {
+      document.body.innerHTML =
+        '<p style="font-family:sans-serif;text-align:center;margin-top:40px;">Opening Remember Project...</p>';
+    }, 2000);
+  </script>
+
+  <p style="font-family:sans-serif;text-align:center;margin-top:40px;">
+    Opening Remember Project...
+  </p>
 </body>
 </html>
