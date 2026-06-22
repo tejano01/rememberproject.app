@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "3TN93SH33R.com.RememberProject.RememberProject",
+        "paths": [
+          "/auth/callback",
+          "/listen/*"
+        ]
+      }
+    ]
+  }
+}
