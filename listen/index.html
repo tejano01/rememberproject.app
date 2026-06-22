@@ -28,8 +28,9 @@
   <script>
     const path = window.location.pathname;
     const id = path.split('/').filter(Boolean).pop();
+    const recordingId = new URLSearchParams(window.location.search).get('id');
     if (id) {
-      window.location = 'rememberproject://listen/' + id;
+      window.location = 'rememberproject://listen/' + recordingId;
     }
   </script>
 </body>
