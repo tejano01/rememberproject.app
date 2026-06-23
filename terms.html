@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Terms of Service for Remember Project iOS app.">
+<title>Terms of Service — Remember Project</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #F7F3EE;
+    --warm-white: #FDFAF7;
+    --parchment: #EDE6DA;
+    --terra: #C17B5C;
+    --brown: #2C1F14;
+    --text-mid: #6B4F3A;
+    --text-light: #A08870;
+    --border: #E0D5C8;
+    --warn-bg: #FFF8F2;
+    --warn-border: #E8A87C;
+  }
+
+  body {
+    background: var(--cream);
+    color: var(--brown);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  header {
+    background: var(--brown);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header a {
+    color: #F7F3EE;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  header .back {
+    font-size: 14px;
+    color: #A08870;
+    text-decoration: none;
+    font-family: -apple-system, sans-serif;
+    font-style: normal;
+  }
+
+  header .back:hover { color: #F7F3EE; }
+
+  .legal-badge {
+    background: var(--parchment);
+    padding: 6px 40px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 60px 40px 100px;
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: var(--brown);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .effective-date {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 32px;
+  }
+
+  .short-version {
+    background: var(--warm-white);
+    border-left: 4px solid var(--terra);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin-bottom: 48px;
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .short-version strong { color: var(--brown); }
+
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--brown);
+    margin-top: 48px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--brown);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  p { margin-bottom: 14px; color: var(--text-mid); }
+
+  ul {
+    margin: 0 0 14px 20px;
+    color: var(--text-mid);
+  }
+
+  ul li { margin-bottom: 8px; }
+
+  ul li strong { color: var(--brown); }
+
+  a { color: var(--terra); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .highlight-box {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .highlight-box p:last-child { margin-bottom: 0; }
+
+  .warn-box {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    border-left: 4px solid var(--terra);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+
+  .warn-box p { color: var(--text-mid); }
+  .warn-box p:last-child { margin-bottom: 0; }
+  .warn-box strong { color: var(--brown); }
+  .warn-box ul { color: var(--text-mid); }
+  .warn-box .warn-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--terra);
+    margin-bottom: 8px;
+  }
+
+  .attorney-placeholder {
+    background: #FBF3E8;
+    border: 1px dashed var(--terra);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--text-mid);
+  }
+  .attorney-placeholder strong { color: var(--terra); }
+
+  .legal-caps {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+  .section-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 48px 0;
+  }
+
+  .contact-box {
+    background: var(--brown);
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .contact-box p { color: rgba(247,243,238,0.7); margin-bottom: 8px; }
+  .contact-box a { color: #D4956F; font-size: 18px; }
+  .contact-box .tagline {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: rgba(247,243,238,0.5);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 13px;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+  }
+
+  footer a { color: var(--text-light); }
+  footer a:hover { color: var(--terra); }
+
+  @media (max-width: 600px) {
+    .container { padding: 40px 24px 80px; }
+    h1 { font-size: 28px; }
+    header { padding: 16px 24px; }
+    .legal-badge { padding: 6px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://rememberproject.app">Remember Project</a>
+  <a href="https://rememberproject.app" class="back">← Back</a>
+</header>
+
+<div class="legal-badge">Legal</div>
+
+<div class="container">
+
+  <h1>Terms of Service</h1>
+  <div class="effective-date">Effective date: June 22, 2026 · Last updated: June 22, 2026</div>
+
+  <div class="short-version">
+    <strong>The short version:</strong> Remember Project is a tool for recording and preserving your family's voices. By using it, you agree to record people only with their consent, to use the sharing feature responsibly, and to keep your own backups of anything irreplaceable. We work hard to keep your recordings safe, but no digital service can guarantee permanence forever — your export is your safety net. These terms are a legal agreement; please read them.
+  </div>
+
+  <h2>1. Agreement to these terms</h2>
+  <p>These Terms of Service ("Terms") are a binding agreement between you and <strong>Second Chapter Technologies LLC</strong>, a Texas limited liability company ("we," "us," or "our"), governing your use of the Remember Project iOS application and related services (collectively, the "Service").</p>
+  <p>By downloading, accessing, or using the Service, you agree to these Terms and to our <a href="https://rememberproject.app/privacy">Privacy Policy</a>, which is incorporated by reference. If you do not agree, do not use the Service.</p>
+
+  <h2>2. Relationship to Apple's terms</h2>
+  <p>The Service is distributed through the Apple App Store. Your use of the Service is also subject to Apple's standard Licensed Application End User License Agreement (the "Apple Standard EULA"), available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">apple.com/legal/internet-services/itunes/dev/stdeula</a>.</p>
+  <p>These Terms are concluded between you and Second Chapter Technologies LLC only, and not with Apple. Apple is not responsible for the Service or its content. To the extent these Terms conflict with the Apple Standard EULA on matters Apple governs (such as the app license itself), the Apple Standard EULA controls for those matters; for everything concerning our Service and your data, these Terms control.</p>
+  <div class="highlight-box">
+    <p><strong>Apple as third-party beneficiary.</strong> You acknowledge that Apple and its subsidiaries are third-party beneficiaries of these Terms and, upon your acceptance, will have the right to enforce these Terms against you. Apple has no obligation to provide maintenance or support for the Service, and is not responsible for addressing any claims relating to the Service.</p>
+  </div>
+
+  <h2>3. Eligibility</h2>
+  <p>You must be at least 13 years old to create an account. If you are between 13 and the age of majority in your jurisdiction, you represent that a parent or legal guardian has reviewed and agreed to these Terms on your behalf. People recorded as subjects (such as parents or grandparents) do not create accounts and are not "users" under these Terms.</p>
+
+  <h2>4. What the Service is</h2>
+  <p>Remember Project is a private family audio archiving tool. It lets you create a family vault, invite family members, record voice answers to questions, react to recordings, attach photos, and export your archive. Audio recordings are encrypted on your device before upload, as described in our Privacy Policy.</p>
+  <p>The Service is provided for personal, family, and non-commercial use. It is not a healthcare service, a legal records system, a notarization service, or a permanent escrow or estate-planning vehicle.</p>
+
+  <h2>5. Your account and your vault</h2>
+  <ul>
+    <li>You are responsible for maintaining the confidentiality of your account credentials and for all activity under your account.</li>
+    <li>Each family vault must have at least one admin. Admins control vault membership, subjects, and recordings.</li>
+    <li>You are responsible for who you invite into your vault. Anyone you invite as a member can access the recordings in that vault.</li>
+    <li>Notify us promptly at <a href="mailto:support@rememberproject.app">support@rememberproject.app</a> if you believe your account has been compromised.</li>
+  </ul>
+
+  <h2>6. Recording consent — your responsibility</h2>
+  <div class="warn-box">
+    <p class="warn-label">You must obtain consent before recording others</p>
+    <p>Recording laws vary by jurisdiction. Some U.S. states and many countries require the consent of <strong>all parties</strong> to a conversation before it may be recorded ("two-party" or "all-party" consent); others require only one party's consent. Texas is a one-party-consent state, but the people you record may be located elsewhere.</p>
+    <p><strong>You are solely responsible</strong> for knowing and complying with the recording consent laws that apply to you and to the people you record. By using the Service to record any person, you represent and warrant that you have obtained all legally required consent from every person whose voice is captured.</p>
+    <p>We do not monitor, review, or enforce recording content or consent. We are not responsible for your failure to obtain required consent, and you agree to indemnify us against any claim arising from recordings you create.</p>
+  </div>
+  <p>We strongly encourage you to record only with the full knowledge and consent of everyone involved — it is both the law in many places and the spirit of what Remember Project is for.</p>
+
+  <h2>7. Sharing recordings — acceptable use</h2>
+  <p>Remember Project Plus includes a Share Recording feature that lets a vault admin share a single recording with someone outside the vault. As described in our Privacy Policy (Section 7A), sharing creates a temporary, time-limited, unencrypted copy of that recording for the recipient's playback, which is automatically deleted after 72 hours or 3 plays.</p>
+  <div class="warn-box">
+    <p class="warn-label">Responsible sharing</p>
+    <p>When you share a recording, you are responsible for ensuring you have the right to share it — including the consent of the person recorded. Only share with people you trust.</p>
+    <p><strong>Once a recording has been played on another person's device, we cannot prevent that person from capturing, re-recording, or further distributing the audio by means outside our control.</strong> Sharing is irreversible in this sense. Do not share recordings you would not want potentially retained by the recipient.</p>
+    <p>You agree not to use the sharing feature to distribute recordings unlawfully, to harass, or to share content involving a person who has not consented to being recorded or shared.</p>
+  </div>
+
+  <h2>8. Acceptable use generally</h2>
+  <p>You agree not to:</p>
+  <ul>
+    <li>Use the Service for any unlawful purpose or in violation of any applicable law, including recording and wiretapping laws</li>
+    <li>Record or upload content you do not have the right to record or upload</li>
+    <li>Upload content that is unlawful, infringing, or that violates the privacy or rights of others</li>
+    <li>Attempt to access another family's vault or any data you are not authorized to access</li>
+    <li>Reverse engineer, decompile, or attempt to extract source code or encryption keys from the Service, except to the limited extent applicable law expressly permits</li>
+    <li>Interfere with, disrupt, or attempt to gain unauthorized access to our systems or networks</li>
+    <li>Resell, sublicense, or commercially exploit the Service without our written permission</li>
+  </ul>
+  <p>We may suspend or terminate accounts that violate these Terms.</p>
+
+  <h2>9. Subscriptions, billing, and auto-renewal</h2>
+  <p>Remember Project offers an optional paid subscription, Remember Project Plus, which unlocks features such as unlimited recordings, additional subjects, the Memory Book PDF export, and the Share Recording feature.</p>
+
+  <div class="highlight-box">
+    <h3 style="margin-top:0;">Auto-renewing subscription terms</h3>
+    <ul>
+      <li><strong>Pricing.</strong> Remember Project Plus is offered at $2.99 per month or $24.99 per year (or the equivalent in your local currency as shown in the App Store at the time of purchase).</li>
+      <li><strong>Payment.</strong> Payment is charged to your Apple ID account at confirmation of purchase.</li>
+      <li><strong>Auto-renewal.</strong> Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period.</li>
+      <li><strong>Renewal charge.</strong> Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period, at the price of the selected plan.</li>
+      <li><strong>Managing your subscription.</strong> You can manage your subscription and turn off auto-renewal in your Apple ID Account Settings after purchase.</li>
+      <li><strong>Free trials, if offered.</strong> Any unused portion of a free trial period is forfeited when you purchase a subscription, where applicable.</li>
+    </ul>
+  </div>
+
+  <p><strong>Refunds.</strong> All purchases are processed by Apple. We do not process payments and cannot issue refunds directly. Refund requests are handled by Apple under its policies, available through your Apple ID or at <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>.</p>
+  <p><strong>Gifted and founding access.</strong> We may grant complimentary Plus access to certain users (for example, founding members or gifted accounts). Complimentary access is provided at our discretion and may be modified or discontinued, though we will not do so in a way that deprives you of recordings you have already made.</p>
+  <p><strong>Price changes.</strong> We may change subscription prices. Price changes will not affect your current billing period and will be disclosed in advance as required by Apple and applicable law.</p>
+
+  <h2>10. Your content and ownership</h2>
+  <p>You and your family own your recordings, questions, reactions, and photos ("Your Content"). We do not claim ownership of Your Content.</p>
+  <p>You grant us a limited license to store, process, transmit, and display Your Content solely for the purpose of operating and providing the Service to you and your vault members — for example, encrypting and storing recordings, delivering them to authorized vault members, generating your exports, and enabling features you choose to use such as Share Recording. This license exists only to run the Service and ends when you delete the content or your account, subject to standard backup retention described in the Privacy Policy.</p>
+  <p>We do not analyze, transcribe, sell, or use Your Content to train AI models. See our Privacy Policy for full detail.</p>
+
+  <h2>11. Export and data portability</h2>
+  <p>Your recordings belong to you and are always exportable. You may export your family vault as a ZIP archive of audio files at any time, and Plus members may generate a Memory Book PDF. We will not hold your data hostage.</p>
+  <div class="warn-box">
+    <p class="warn-label">Keep your own backups</p>
+    <p>We strongly recommend you export and retain your own copies of any recordings that are irreplaceable. Your export is your safety net against account loss, service interruption, or the events described in Section 13.</p>
+  </div>
+
+  <h2>12. Vault administration, succession, and death of an admin</h2>
+  <p>Each family vault must have at least one admin. We strongly recommend designating at least one co-admin for every vault.</p>
+  <div class="warn-box">
+    <p class="warn-label">We cannot recover or transfer a locked vault</p>
+    <p>If the sole admin of a vault becomes incapacitated, passes away, or permanently loses access to their account, <strong>Second Chapter Technologies LLC cannot unlock, transfer, or grant access to that vault</strong> — including at the request of family members, legal representatives, or estate executors — except pursuant to a valid court order.</p>
+    <p>We are not a fiduciary and assume no custodial responsibility for vault data. We do not adjudicate disputes over vault ownership, inheritance, or access between family members. To protect your family's memories, designate a co-admin and keep your credentials accessible to a trusted person, and maintain your own exported backups (Section 11).</p>
+  </div>
+  <p>If our Service is discontinued, or if Second Chapter Technologies LLC ceases operations, vault data may become inaccessible once the underlying infrastructure is no longer maintained. This is another reason your own exports are essential.</p>
+
+  <h2>13. No warranty of data permanence</h2>
+  <div class="warn-box">
+    <p class="warn-label">Important — please read</p>
+    <p>While we use strong security and encryption and work hard to keep your recordings safe, <strong>no digital service can guarantee that data will be preserved permanently or be available without interruption.</strong> Data loss can occur from hardware failure, software error, security incidents, service discontinuation, lapses in third-party providers, your own account deletion, device reinstallation, or events beyond our reasonable control.</p>
+    <p>The Service is not a substitute for your own backups. You are responsible for exporting and independently retaining copies of any recordings that matter to you. We are not liable for the loss, corruption, or unavailability of Your Content.</p>
+  </div>
+
+  <h2>14. Third-party services</h2>
+  <p>The Service relies on third-party providers — including Apple (App Store, payments, push notifications), Supabase (database and storage), and Resend (transactional email). Your use of the Service depends on these providers, and their availability and terms are outside our control. We are not responsible for outages, changes, or failures of third-party services.</p>
+
+  <h2>15. Disclaimers</h2>
+  <p class="legal-caps">The Service is provided "as is" and "as available," without warranties of any kind, whether express, implied, or statutory, including any implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. We do not warrant that the Service will be uninterrupted, error-free, secure, or that data will be preserved or recoverable. Some jurisdictions do not allow the exclusion of certain warranties, so some of the above may not apply to you.</p>
+
+  <h2>16. Limitation of liability</h2>
+  <p class="legal-caps">To the maximum extent permitted by law, Second Chapter Technologies LLC and its members, officers, and agents will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any loss of data, recordings, profits, or goodwill, arising out of or related to your use of or inability to use the Service, even if advised of the possibility of such damages.</p>
+  <p class="legal-caps">To the maximum extent permitted by law, our total aggregate liability for any claim arising out of or relating to the Service or these Terms will not exceed the greater of (a) the amount you paid us for the Service in the twelve months preceding the claim, or (b) twenty-five U.S. dollars ($25). Some jurisdictions do not allow certain limitations of liability, so some of the above may not apply to you.</p>
+
+  <h2>17. Indemnification</h2>
+  <p>You agree to indemnify and hold harmless Second Chapter Technologies LLC from any claims, damages, losses, or expenses (including reasonable attorneys' fees) arising out of your use of the Service, Your Content, your violation of these Terms, your failure to obtain required recording consent, or your misuse of the sharing feature.</p>
+
+  <h2>18. Termination</h2>
+  <p>You may stop using the Service and delete your account at any time from Settings → Delete My Data. We may suspend or terminate your access if you violate these Terms or if required by law. Sections that by their nature should survive termination — including ownership, disclaimers, limitation of liability, indemnification, and dispute resolution — will survive.</p>
+
+  <h2>19. Governing law and dispute resolution</h2>
+  <div class="attorney-placeholder">
+    <strong>[ATTORNEY REVIEW — PLACEHOLDER]</strong><br>
+    Governing law, venue, and dispute-resolution mechanism (including whether to include a binding arbitration clause and class-action waiver) to be finalized with counsel (Lisa Angelo) before publication. Default expectation: laws of the State of Texas, venue in the county of the LLC's principal place of business. Confirm enforceability of liability cap and indemnification provisions under Texas law and Apple's developer agreement requirements.
+  </div>
+  <p>Until finalized, these Terms are intended to be governed by the laws of the State of Texas, without regard to its conflict-of-laws principles, and you and we submit to the jurisdiction of the state and federal courts located in Texas, except where applicable consumer-protection law grants you the right to proceed in your local jurisdiction.</p>
+
+  <h2>20. Changes to these Terms</h2>
+  <p>We may update these Terms from time to time. We will update the effective date above and, for material changes, notify you via the app or email. Your continued use of the Service after changes take effect constitutes acceptance of the revised Terms.</p>
+
+  <h2>21. Contact</h2>
+  <p>Questions about these Terms can be sent to <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>. These Terms, together with our Privacy Policy and the Apple Standard EULA, constitute the entire agreement between you and us regarding the Service.</p>
+
+  <div class="contact-box">
+    <p>Questions about these Terms?</p>
+    <p style="font-size:13px;margin-bottom:16px;">We read every email and respond personally.</p>
+    <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>
+    <p class="tagline">"Before it's too late."</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Second Chapter Technologies LLC · Remember Project · <a href="https://rememberproject.app">rememberproject.app</a>
+</footer>
+
+</body>
+</html>
