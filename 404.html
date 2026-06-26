@@ -1,17 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Remember Project</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    // Redirect /listen/[id] to the listen page with the id as a query param
-    const path = window.location.pathname;
-    if (path.startsWith('/listen/')) {
-      const id = path.split('/').filter(Boolean).pop();
-      window.location.replace('/listen/?id=' + id);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Remember Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F0E8;
+      --terracotta: #C17A5A;
+      --terracotta-light: #D4956F;
+      --ink: #2C2420;
+      --muted: #8C7B72;
+      --faint: #E8DDD4;
     }
-  </script>
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    /* Ambient faded rings — like echoes of a memory */
+    .rings {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--faint);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: ripple 6s ease-out infinite;
+    }
+    .ring:nth-child(1) { width: 300px; height: 300px; animation-delay: 0s; }
+    .ring:nth-child(2) { width: 500px; height: 500px; animation-delay: 1.5s; }
+    .ring:nth-child(3) { width: 700px; height: 700px; animation-delay: 3s; }
+    .ring:nth-child(4) { width: 900px; height: 900px; animation-delay: 4.5s; }
+
+    @keyframes ripple {
+      0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+      20%  { opacity: 1; }
+      100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ring { animation: none; opacity: 0.4; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 480px;
+    }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 28px;
+    }
+
+    .headline {
+      font-family: 'Lora', serif;
+      font-size: clamp(36px, 7vw, 56px);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .headline em {
+      font-style: normal;
+      color: var(--terracotta);
+    }
+
+    .subhead {
+      font-family: 'Lora', serif;
+      font-size: clamp(14px, 2.5vw, 17px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--terracotta-light);
+      margin: 0 auto 20px;
+      opacity: 0.5;
+    }
+
+    .body {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 360px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 14px 36px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      background: var(--terracotta-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(193,122,90,0.25);
+    }
+
+    .footer-note {
+      position: fixed;
+      bottom: 24px;
+      font-size: 11px;
+      color: #C4B5AC;
+      letter-spacing: 0.03em;
+    }
+  </style>
 </head>
-<body></body>
+<body>
+
+  <div class="rings">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+
+  <div class="content">
+    <p class="eyebrow">404 — Page not found</p>
+    <h1 class="headline">This page<br>has been <em>forgotten.</em></h1>
+    <div class="divider"></div>
+    <p class="subhead">Which is exactly what we're here to prevent.</p>
+    <p class="body">The page you're looking for doesn't exist — but the voices that matter to you do. Head home and start preserving them.</p>
+    <a class="btn" href="/">Take me home</a>
+  </div>
+
+  <p class="footer-note">© 2026 Second Chapter Technologies LLC · Remember Project · rememberproject.app</p>
+
+</body>
 </html>
