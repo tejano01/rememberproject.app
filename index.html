@@ -59,17 +59,21 @@
   }
   nav.scrolled .nav-logo { color: var(--walnut); }
   .nav-cta {
-    background: var(--terracotta);
-    color: white;
+    background: transparent;
+    color: rgba(247, 243, 238, 0.55);
     font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 22px;
-    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 0;
+    border-radius: 0;
     text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: default;
+    pointer-events: none;
   }
-  .nav-cta:hover { background: var(--terracotta-dark); transform: translateY(-1px); }
+  nav.scrolled .nav-cta { color: var(--text-muted); }
+  .nav-cta:hover { background: transparent; transform: none; }
 
   /* ─── HERO ─── */
   .hero {
@@ -173,6 +177,28 @@
     flex-wrap: wrap;
     opacity: 0;
     animation: fadeUp 0.8s 1.0s forwards;
+  }
+
+  .coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(247, 243, 238, 0.55);
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(247, 243, 238, 0.2);
+    padding: 12px 24px;
+    border-radius: 100px;
+  }
+  .coming-soon-badge::before {
+    content: '🍎';
+    font-size: 13px;
+  }
+  .coming-soon-dark {
+    color: var(--text-muted);
+    border-color: rgba(193, 123, 92, 0.3);
   }
 
   .btn-primary {
@@ -843,7 +869,7 @@
 <!-- NAV -->
 <nav id="nav">
   <a class="nav-logo" href="#">Remember Project</a>
-  <a class="nav-cta" href="#download">Download Free</a>
+  <a class="nav-cta" href="#">Coming Soon</a>
 </nav>
 
 <!-- HERO -->
@@ -855,9 +881,7 @@
     <h1 class="hero-headline">"Will you remember what their voice sounded like?"</h1>
     <p class="hero-sub">A private vault for the conversations you've always meant to have — and the ones you'll be grateful you did.</p>
     <div class="hero-actions">
-      <a href="#download" class="btn-primary">
-        <span>📱</span> Download on iPhone
-      </a>
+      <span class="coming-soon-badge">Coming Soon on the App Store</span>
       <a href="#how" class="btn-ghost">See how it works</a>
     </div>
   </div>
@@ -1096,9 +1120,7 @@
   <h2 class="cta-headline reveal">Before it's too late.</h2>
   <p class="cta-sub reveal">Free to start. One question at a time. The first conversation is closer than you think.</p>
   <div class="cta-buttons reveal">
-    <a href="#" class="app-store-btn">
-      <span class="app-store-icon">🍎</span> Download on the App Store
-    </a>
+    <span class="coming-soon-badge coming-soon-dark">Coming Soon on the App Store</span>
   </div>
 </section>
 
