@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Night I Submitted — Remember Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F5F0E8;
+      --terracotta: #C17A5A;
+      --terracotta-light: #D4956F;
+      --ink: #2C2420;
+      --muted: #8C7B72;
+      --faint: #E8DDD4;
+      --card: #FDFAF7;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(245,240,232,0.85);
+      border-bottom: 1px solid var(--faint);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--terracotta); }
+
+    /* HERO */
+    .hero {
+      padding: 120px 24px 64px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+    .hero-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .hero-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--terracotta);
+      opacity: 0.4;
+      margin-bottom: 40px;
+    }
+
+    /* BODY */
+    .post-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .post-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+    .post-body p.lead {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    /* PULLQUOTE */
+    .pullquote {
+      border-left: 3px solid var(--terracotta);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .pullquote p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 10px !important;
+    }
+    .pullquote cite {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* SECTION BREAK */
+    .section-break {
+      text-align: center;
+      margin: 48px 0;
+      color: var(--terracotta);
+      opacity: 0.5;
+      letter-spacing: 0.3em;
+      font-size: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--faint);
+      padding: 32px 24px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .footer-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+      flex-shrink: 0;
+    }
+    .author-info p {
+      font-size: 14px !important;
+      margin-bottom: 2px !important;
+      line-height: 1.4 !important;
+    }
+    .author-info .author-name {
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .author-info .author-role {
+      color: var(--muted);
+      font-size: 12px !important;
+    }
+    .post-nav {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--faint);
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .post-nav a {
+      color: var(--terracotta);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .post-nav a:hover { text-decoration: underline; }
+    .copyright {
+      margin-top: 32px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">Remember Project</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
+
+<article>
+  <div class="hero">
+    <p class="eyebrow">Founder's Note · June 26, 2026</p>
+    <h1 class="hero-title">I submitted the app.<br>I'm at a bar.</h1>
+    <p class="hero-meta">By Michael Rivera &nbsp;·&nbsp; 5 min read</p>
+    <div class="hero-divider"></div>
+  </div>
+
+  <div class="post-body">
+
+    <p class="lead">I want to ask you something. Do you remember what your grandparents' voice sounded like?</p>
+
+    <p>Not a vague impression. Not "warm" or "soft" or "it had an accent." I mean — can you actually hear it right now, in your head, if you close your eyes?</p>
+
+    <p>I asked a room full of family members that question a few weeks ago. People who loved their parents. People who still talk about them at every gathering. People with photos on the wall.</p>
+
+    <p>Nobody could answer.</p>
+
+    <p>That's the whole product. That moment. That silence.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>My dad is 82. My mom is 76. I have been building software my entire career and it took me until right now — tonight, sitting at Center Court Pizza in Katy, Texas, waiting on an Apple reviewer to pick up my app — to build the one thing I actually needed to build.</p>
+
+    <p>I didn't set out to make a voice archiving app. I set out to solve a problem I had been ignoring for years. The problem is this: my grandparents on both sides are gone. Papaman and Mamamela — my dad's parents. And Grandpa and Grandma — my mom's, who lived one block from us. I remember all of them. I remember the kitchen on Hortencia Street in Brownsville. I remember waking up early and hearing Papaman and Mamamela, with Tia Marcela, Dad, Mom talking.  At the time I didn't understand how important those conversations would be, now they are gone. That house is gone now too.</p>
+
+    <p>What I don't have is their voice. Not one second of audio. Not a voicemail. Nothing.</p>
+
+    <p>My maternal grandparents lived a block away. We went to their house every morning before school. Grandpa sat on the couch watching news on Telemundo. Grandma made papas with salsa — picoso, the real kind — and we'd eat before we left. Every morning. That was just life. That was just a normal school day.</p>
+
+    <p>I didn't think to record any of it, but also being the early to mid 80s, we didn't have the kind of technology that would allow us to do so. Nobody really thinks keeping these stories alive. That's the whole problem.</p>
+
+    <p>That absence is why this app exists.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>A few weeks ago I ran a test with my family. Mom sat down, opened the app, and saw the question: <em>"What did the kitchen smell like on a normal morning?"</em></p>
+
+    <p>She recorded for several minutes. Unprompted. Unprepared. Just — talking. The way she talks when she doesn't know she's being recorded.</p>
+
+    <p>My dad recorded his first answer the same day. He's 82. He doesn't type. He barely texts. But he answered a question his son asked him, in his son's voice, and the app captured it.</p>
+
+    <p>My Aunt Esther listened to my mom's recording and laughed. Not cried — laughed. She recognized details from their shared childhood that she hadn't thought about in decades. That's the product working. Not tears. Recognition.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <div class="pullquote">
+      <p>"You motherfucker. I've only read a couple of paragrpahes and I'm on the verge of tears."</p>
+      <cite>— A stranger at a bar, after I showed him the preview site</cite>
+    </div>
+
+    <p>That was unprompted. I showed him the preview site. I didn't pitch him. I didn't explain what the app did or why I built it. He just read it and felt it.</p>
+
+    <p>That's when I knew.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>This app was harder to build than anything I've made before. Not technically — technically it's clean, well-architected, encrypted, tested. Harder because I kept discovering what it needed to be <em>while</em> I was building it. Every real moment with a real family member revealed something the app had to do next.</p>
+
+    <p>My Aunt Belia heard one of my mom's recordings — just a regular answer to a question about the family. She talked to me afterward. She said: you need to ask your mom about the time she cut my hair as a little girl. There's a story there you don't know. Belia knew the story. My mom had never been asked to tell it. The app didn't just capture a memory — it surfaced one that was about to be forgotten. That's how this product works. It finds things.</p>
+
+    <p>I have another app on the App Store. That one lived in my head for four years before I built it — fully formed, waiting to be coded. Remember Project was different. I started building it this year, a few weeks back. I didn't know what it needed to be until it showed me. Every real moment with a real family member revealed something the app had to do next. Remember Project surprised me.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>Tonight I hit submit. Apple will review it. They'll sign in as my dad's stand-in — a test account called Robert, born 1944 — and see one question on the screen waiting for him. They'll see a big record button and nothing else. They'll see what an 82-year-old man sees when his family asks him to share a story.</p>
+
+    <p>I hope they feel it.</p>
+
+    <p>I hope you do too.</p>
+
+    <p>If you have a parent, a grandparent, an aunt, an uncle — someone whose voice you are not ready to forget — go to <a href="https://rememberproject.app" style="color: var(--terracotta); text-decoration: none; font-weight: 500;">rememberproject.app</a>. The app isn't live yet. But it will be soon.</p>
+
+    <p>And when it is, ask them what the kitchen smelled like on a normal morning.</p>
+
+    <p>— Michael</p>
+    <p style="color: var(--muted); font-size: 14px; margin-top: -20px;">Founder, Remember Project<br>Second Chapter Technologies LLC</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="footer-author">
+    <div class="author-avatar">M</div>
+    <div class="author-info">
+      <p class="author-name">Michael Rivera</p>
+      <p class="author-role">Founder, Remember Project · Second Chapter Technologies LLC</p>
+    </div>
+  </div>
+  <div class="post-nav">
+    <a href="/blog">← All posts</a>
+    <a href="/">Remember Project →</a>
+  </div>
+  <p class="copyright">© 2026 Second Chapter Technologies LLC · Remember Project · rememberproject.app</p>
+</footer>
+
+</body>
+</html>
