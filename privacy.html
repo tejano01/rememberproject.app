@@ -207,122 +207,115 @@
 <div class="container">
 
   <h1>Privacy Policy</h1>
-  <div class="effective-date">Effective date: May 29, 2026 · Last updated: May 29, 2026</div>
+  <div class="effective-date">Effective date: May 29, 2026 · Last updated: July 8, 2026</div>
 
   <div class="short-version">
-    <strong>The short version:</strong> Remember Project is built to protect your family's most private memories. We store only what's necessary to preserve your recordings and make them accessible to your family. We never sell your data. We never share your recordings with anyone outside your family vault. Your recordings are never analyzed, transcribed, or used to train AI models. Your data is yours — always exportable, always deletable.
+    <strong>The short version:</strong> Remember Project is built to protect your family&#x27;s most private memories. We store only what&#x27;s necessary to preserve your recordings and make them accessible to your family. We never sell your data. Your recordings are visible only to members of your family vault unless a vault admin deliberately shares an individual recording using the Share Recording feature (see Section 7A). Your recordings are never analyzed or transcribed, are never used to train AI models, and are never used to identify anyone by their voice. Your data is yours — always exportable, always deletable.
   </div>
 
+
   <h2>1. Who we are</h2>
-  <p>Remember Project ("we," "us," or "our") is an iOS application developed and operated by Second Chapter Technologies LLC, based in Texas, United States. You can reach us at <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>.</p>
+  <p>Remember Project (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is an iOS application developed and operated by Second Chapter Technologies LLC, based in Texas, United States. You can reach us at <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>.</p>
 
   <h2>2. What information we collect</h2>
   <ul>
     <li><strong>Account information:</strong> Email address and display name, used for authentication and family vault access.</li>
     <li><strong>Family vault data:</strong> Subject names, birth years, and optional notes you add about the people you are recording.</li>
     <li><strong>Questions:</strong> Text questions submitted by family members, including category and who submitted them.</li>
-    <li><strong>Audio recordings:</strong> Voice recordings captured in-app and stored in your family's private vault. These are the core of the service.</li>
+    <li><strong>Audio recordings:</strong> Voice recordings captured in-app and stored in your family&#x27;s private vault. These are the core of the service.</li>
     <li><strong>Reactions:</strong> Text responses left by family members on individual recordings.</li>
     <li><strong>Photos:</strong> Optional photos attached to questions or recordings as memory triggers or context.</li>
     <li><strong>Activity data:</strong> Records of who added questions, recordings, and reactions within your family vault — visible only to members of that vault.</li>
     <li><strong>Crash reports:</strong> Anonymous crash data via Firebase Crashlytics to improve app stability.</li>
   </ul>
+  <p>Some of this information — including subject names, birth years, notes, photos, and the voices captured in recordings — relates to the people being recorded, who may not have accounts of their own. Section 10D describes how we treat information about recorded people who are not users.</p>
 
-  <h2>3. What we never collect</h2>
-  <div class="never-list">
-    <ul>
-      <li>Your location at any time</li>
-      <li>Photos of your face or biometric data of any kind</li>
-      <li>Messages outside the app's reaction feature</li>
-      <li>Social media profiles or third-party account data</li>
-      <li>Payment information (handled entirely by Apple)</li>
-      <li>Any data from people being recorded — subjects do not need accounts and we collect nothing about them beyond what you voluntarily enter</li>
-      <li>Sensitive personal information such as Social Security numbers, government-issued ID, or financial account data</li>
-    </ul>
-  </div>
+  <h2>3. What we never collect or create</h2>
+  <ul>
+    <li>Your location at any time</li>
+    <li>Voiceprints, biometric templates, or facial-recognition data — we do not analyze recordings or photos to identify or authenticate anyone</li>
+    <li>Messages outside the app&#x27;s reaction feature</li>
+    <li>Social media profiles or third-party account data</li>
+    <li>Payment information (handled entirely by Apple)</li>
+    <li>Sensitive personal information such as Social Security numbers, government-issued ID, or financial account data</li>
+  </ul>
+  <p>People you record (subjects) do not need accounts. We collect information about them only through what you and your vault members voluntarily enter and record. See Section 10D.</p>
 
   <h2>4. How we use your information</h2>
   <ul>
-    <li><strong>To operate the app:</strong> Store and deliver your family's recordings, questions, reactions, and photos securely within your family vault.</li>
+    <li><strong>To operate the app:</strong> Store and deliver your family&#x27;s recordings, questions, reactions, and photos securely within your family vault.</li>
     <li><strong>To improve the app:</strong> Anonymous, aggregate crash analytics only. No behavioral tracking, no individual-level analytics.</li>
     <li><strong>To communicate with you:</strong> Transactional emails only — password reset, account confirmation, and family invites you explicitly trigger. No marketing emails without your explicit consent.</li>
   </ul>
 
   <h2>5. We do not sell or share your personal information</h2>
-  <p>We do not sell, rent, trade, or share your personal information or your family's recordings with any third party for any commercial purpose. Ever.</p>
-  <p>Your recordings, questions, reactions, and photos are visible only to members of your family vault — people you explicitly invited or accepted an invitation from.</p>
+  <p>We do not sell, rent, trade, or share your personal information or your family&#x27;s recordings with any third party for any commercial purpose. Ever.</p>
+  <p>Your recordings, questions, reactions, and photos are visible only to members of your family vault — people you explicitly invited or accepted an invitation from — unless a vault admin deliberately shares an individual recording outside the vault using the Share Recording feature described in Section 7A. Nothing is ever shared automatically.</p>
 
   <h2>6. Family vault isolation</h2>
-  <p>Each family vault is completely isolated. Members can only access data from vaults they belong to. Row-level security policies enforce this at the database level — it is not possible for one family to access another family's data even with a valid account.</p>
+  <p>Each family vault is completely isolated. Members can only access data from vaults they belong to. Row-level security policies enforce this at the database level — it is not possible for one family to access another family&#x27;s data even with a valid account.</p>
   <p>If you belong to multiple family vaults, each is a separate, isolated environment. Your activity in one vault is not visible to members of another.</p>
 
   <h2>7. Audio recordings — special protections</h2>
   <p>Audio recordings are the most sensitive data we store. We treat them accordingly.</p>
+  <ul>
+    <li>All recordings are stored in private, access-controlled storage buckets.</li>
+    <li>Access URLs are signed and time-limited — they expire automatically and are not designed for access outside the app. The only exception is deliberate sharing by a vault admin through the Share Recording feature (Section 7A).</li>
+    <li>Recordings are encrypted on your device before upload (AES-256) and remain encrypted in storage, in addition to encrypted connections in transit. Encryption keys are managed within our infrastructure — this means we are technically capable of accessing recordings, and we will not do so except as described in this policy or as required by valid legal process. The Service is not a zero-knowledge system.</li>
+    <li>Recordings are not analyzed, transcribed, or used for advertising, profiling, or AI training purposes.</li>
+    <li>We do not create voiceprints or biometric templates from recordings, and we do not use recordings to identify or authenticate any person.</li>
+    <li>Recordings are not used for any commercial purpose beyond providing the playback, sharing, and export features you choose to use within the Service.</li>
+  </ul>
 
+  <h2>7A. Sharing recordings outside your vault</h2>
+  <p>Remember Project Plus includes a Share Recording feature that lets a vault admin share a single recording with someone outside the vault. Sharing is always a deliberate action by a vault admin — nothing is ever shared automatically.</p>
+  <p>How sharing works:</p>
+  <ul>
+    <li>Sharing creates a temporary copy of the recording that the recipient can play through a time-limited link. The shared copy expires and is automatically deleted after 72 hours or 3 plays, whichever comes first.</li>
+    <li>Before a share link is created, the sender must confirm they have the right and any necessary consent to share the recording outside the vault.</li>
+    <li>Before playback, the recipient must accept limited terms of use that prohibit redistribution, commercial use, voice cloning or synthetic-voice use, unlawful use, and attempts to bypass the time or play limits.</li>
+    <li>We keep a record of shares (who shared, when, and playback count) as part of your vault&#x27;s activity data after the shared copy expires.</li>
+  </ul>
   <div class="highlight-box">
-    <ul>
-      <li>All recordings are stored in private, access-controlled storage buckets.</li>
-      <li>Access URLs are signed and time-limited — they expire and cannot be shared or accessed outside the app.</li>
-      <li>Recordings are <strong>not analyzed, transcribed, or used</strong> for advertising, profiling, or AI training purposes.</li>
-      <li>Recordings are <strong>not used</strong> to train AI models or for any commercial purpose beyond playback within your family vault.</li>
-      <li>Recordings are encrypted at rest and in transit.</li>
-    </ul>
+    <p>What we cannot control: once a recording has been played on someone else&#x27;s device, we cannot prevent that person from capturing, re-recording, or preserving the audio by means outside the app. Time and play limits reduce this risk, but they do not eliminate it. Share only with people you trust.</p>
   </div>
 
   <h2>8. Data retention and deletion</h2>
   <ul>
     <li><strong>Recordings, questions, reactions, photos:</strong> Retained for the life of your account unless you delete them individually or delete your account.</li>
-    <li><strong>Account deletion:</strong> You may delete your account at any time from Settings → Delete My Data. Deletion removes your account, your submitted questions, your reactions, and any recordings you captured. Subjects you created and their associated recordings are also removed. <strong>This cannot be undone.</strong></li>
-    <li><strong>Export before deletion:</strong> We strongly recommend exporting your family's recordings before deleting your account. See Section 10.</li>
+    <li><strong>Account deletion:</strong> You may delete your account at any time from Settings → Delete My Data. Deletion removes your account, your submitted questions, your reactions, and any recordings you captured. Subjects you created and their associated recordings are also removed. This cannot be undone.</li>
+    <li><strong>Expired shares:</strong> Temporary shared copies are deleted automatically when they expire (Section 7A). Share activity records are retained as part of vault activity data.</li>
+    <li><strong>Exported copies:</strong> Exports downloaded by you or your family members exist outside our systems. Deleting content in the app does not delete copies that were previously exported or captured.</li>
+    <li><strong>Requests from recorded people:</strong> See Section 10D for how a recorded person — or the parent or legal guardian of a recorded child — can request removal of recordings of them.</li>
+    <li><strong>Export before deletion:</strong> We strongly recommend exporting your family&#x27;s recordings before deleting your account. See Section 10.</li>
     <li><strong>After deletion:</strong> Deleted data may remain in encrypted backups for a limited retention period before permanent deletion. Crash logs and anonymized technical records may be retained as required for legal compliance or system integrity.</li>
   </ul>
 
   <h2>8A. Health information and medical content</h2>
   <p>Remember Project is not a healthcare application and is not subject to HIPAA or other healthcare privacy regulations. We are not a covered entity under HIPAA, and our security practices are designed for family archiving — not healthcare data storage.</p>
   <p>If you choose to record conversations that include discussion of health conditions, medical treatments, diagnoses, medications, or other sensitive health information, you do so at your own discretion and at your own risk. We have no control over the content of recordings and cannot prevent, detect, or restrict health-related content.</p>
-
-  <div class="highlight-box">
-    <p>We strongly recommend:</p>
-    <ul>
-      <li>Recording only with the full knowledge and consent of all people whose voices are captured</li>
-      <li>Being thoughtful about what sensitive health information is recorded and stored digitally</li>
-      <li>Understanding that even encrypted digital storage carries inherent privacy risks</li>
-      <li>Consulting a healthcare provider or privacy attorney if you have specific concerns about recording medical information</li>
-    </ul>
-  </div>
-
+  <p>We strongly recommend:</p>
+  <ul>
+    <li>Recording only with the full knowledge and consent of all people whose voices are captured</li>
+    <li>Being thoughtful about what sensitive health information is recorded and stored digitally</li>
+    <li>Understanding that even encrypted digital storage carries inherent privacy risks</li>
+    <li>Consulting a healthcare provider or privacy attorney if you have specific concerns about recording medical information</li>
+  </ul>
   <p>Remember Project applies the same security protections to all recordings regardless of content — but if you require HIPAA-compliant storage for medical records or protected health information, you should use a healthcare-specific service designed for that purpose.</p>
 
   <h2>9. Data sharing and service providers</h2>
   <ul>
     <li><strong>Supabase:</strong> Backend database and file storage (PostgreSQL + Supabase Storage). Data stored in US West (Oregon). <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></li>
-    <li><strong>Apple:</strong> Push notifications (APNs) and in-app purchases (StoreKit). <a href="https://apple.com/privacy" target="_blank">apple.com/privacy</a></li>
+    <li><strong>Apple:</strong> Push notifications (APNs) and in-app purchases (StoreKit). <a href="https://www.apple.com/privacy" target="_blank">apple.com/privacy</a></li>
     <li><strong>Google Firebase:</strong> Crash reporting (Crashlytics). Anonymous data only. <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+    <li><strong>Resend:</strong> Transactional email delivery (account emails and family invites you trigger). <a href="https://resend.com/legal/privacy-policy" target="_blank">resend.com/legal/privacy-policy</a></li>
   </ul>
   <p>No other third parties have access to your data.</p>
 
   <h2>10. Your right to export</h2>
-  <p>Your recordings belong to you. At any time you may export your family vault as a ZIP file containing all audio recordings, named by question and subject — for example, <em>Dad_What-did-the-kitchen-smell-like.m4a</em>. This export is available from Settings → Export.</p>
+  <p>Your recordings belong to you. At any time you may export your family vault as a ZIP file containing all audio recordings, named by question and subject — for example, Dad_What-did-the-kitchen-smell-like.m4a. This export is available from Settings → Export.</p>
   <p>Remember Project Plus members may also generate a Memory Book — a formatted PDF of all recordings, questions, reactions, and photos, designed to be printed or shared with family.</p>
   <p>We will never hold your data hostage. If you choose to leave the platform, your memories leave with you.</p>
-
-  <h2>10C. Vault administration and succession</h2>
-  <p>Each family vault must have at least one designated admin. The admin controls who can access the vault, invite new members, and manage subjects and recordings.</p>
-
-  <div class="highlight-box">
-    <p><strong>We strongly recommend designating at least one co-admin for every family vault.</strong> If the sole admin becomes incapacitated, passes away, or loses access to their account, Remember Project cannot unlock, transfer, or grant access to the vault under any circumstances — including at the request of family members, legal representatives, or estate executors.</p>
-  </div>
-
-  <p>Remember Project is not a fiduciary and assumes no custodial responsibility for family vault data. We provide a secure tool for family archiving. We do not adjudicate disputes over vault ownership, inheritance, or access rights between family members.</p>
-
-  <p>In the event that a vault becomes inaccessible due to loss of admin access:</p>
-  <ul>
-    <li>Remember Project will not unlock or bypass vault security for any reason</li>
-    <li>Remember Project will not transfer vault ownership or data to any third party, including estate executors or legal representatives, without a valid court order</li>
-    <li>Vault data will remain stored but inaccessible until it is deleted per our standard data retention schedule or pursuant to a valid legal order</li>
-  </ul>
-
-  <p>To protect your family's memories, we encourage all admins to designate a co-admin during vault setup and to keep their account credentials accessible to a trusted family member.</p>
 
   <h2>10A. Legal disclosures</h2>
   <p>We may disclose your information if required to do so by law, subpoena, court order, or other valid legal process. We may also disclose information when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.</p>
@@ -331,17 +324,41 @@
   <h2>10B. Your responsibility to obtain consent</h2>
   <p>Recording laws vary by jurisdiction. Some locations require the consent of all parties being recorded before a recording may be made. Users are solely responsible for complying with applicable recording consent laws in their jurisdiction before using Remember Project to record others.</p>
   <p>Remember Project does not monitor recording content or enforce consent requirements. By using the app to record another person, you represent that you have obtained any legally required consent.</p>
+  <p><strong>Recordings that include a child:</strong> If a recording includes a child, you must be the child&#x27;s parent or legal guardian, or have permission from the child&#x27;s parent or legal guardian, before recording. The app may ask you to confirm this before recording begins.</p>
+  <p>The app may also ask you to affirmatively confirm — before recording or before sharing — that you have the legal right and any required consent. These confirmations may be logged as part of your vault&#x27;s records.</p>
+
+  <h2>10C. Vault administration and succession</h2>
+  <p>Each family vault must have at least one designated admin. The admin controls who can access the vault, invite new members, and manage subjects and recordings.</p>
+  <p>We strongly recommend designating at least one co-admin for every family vault. If the sole admin becomes incapacitated, passes away, or loses access to their account, Remember Project will not unlock, transfer, or grant access to the vault at the request of family members, legal representatives, or estate executors, except pursuant to a valid court order or other binding legal process.</p>
+  <p>Remember Project is not a fiduciary and assumes no custodial responsibility for family vault data. We provide a secure tool for family archiving. We do not adjudicate disputes over vault ownership, inheritance, or access rights between family members, and we may require the agreement of authorized users or valid legal process before acting on any disputed request.</p>
+  <p>In the event that a vault becomes inaccessible due to loss of admin access:</p>
+  <ul>
+    <li>Remember Project will not unlock or bypass vault security at the request of any person</li>
+    <li>Remember Project will not transfer vault ownership or data to any third party, including estate executors or legal representatives, except pursuant to a valid court order or other binding legal process</li>
+    <li>Vault data will remain stored but inaccessible until it is deleted per our standard data retention schedule or handled pursuant to a valid legal order</li>
+  </ul>
+  <p>To protect your family&#x27;s memories, we encourage all admins to designate a co-admin during vault setup and to keep their account credentials accessible to a trusted family member.</p>
+
+  <h2>10D. People who are recorded but do not have accounts</h2>
+  <p>Many of the people whose voices are preserved in Remember Project — parents, grandparents, and other family members — never create accounts. We take their privacy seriously.</p>
+  <ul>
+    <li><strong>What we store about them:</strong> their voices in recordings, and the names, birth years, notes, and photos that vault members voluntarily enter about them.</li>
+    <li><strong>Who is responsible:</strong> the vault member who records or uploads content is responsible for having the recorded person&#x27;s consent, and for parental or guardian permission where the recorded person is a child (Section 10B).</li>
+    <li><strong>Removal requests:</strong> a recorded person — or the parent or legal guardian of a recorded child — may request removal of recordings of them by contacting <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>. We will take reasonable steps to verify the request, may notify the vault admin, and will remove the identified recordings from our active systems within 30 days of a verified request.</li>
+  </ul>
+  <p>Removal cannot reach copies that were exported, shared, or captured outside the Service before the removal took effect.</p>
 
   <h2>11. In-app purchases</h2>
   <p>Subscriptions are processed entirely by Apple through the App Store. We never see, store, or handle your payment information.</p>
 
-  <h2>12. Children's privacy</h2>
-  <p>Remember Project is not directed at children under 13. We do not knowingly collect personal information from children under 13. People being recorded as subjects (such as grandparents or parents) do not create accounts, and we collect no data about them directly beyond what you voluntarily enter.</p>
-  <p>If you believe a child under 13 has created an account, contact <a href="mailto:support@rememberproject.app">support@rememberproject.app</a> and we will delete the account promptly.</p>
+  <h2>12. Children&#x27;s privacy</h2>
+  <p>Remember Project is not directed at children under 13, and we do not knowingly allow children under 13 to create accounts. If you believe a child under 13 has created an account, contact <a href="mailto:support@rememberproject.app">support@rememberproject.app</a> and we will delete the account promptly.</p>
+  <p>Children&#x27;s voices may appear in recordings made by adult users — for example, a grandchild asking a question or answering one. The adult who makes the recording is responsible for having permission from the child&#x27;s parent or legal guardian before recording (Section 10B). A parent or legal guardian may request removal of recordings of their child at any time (Section 10D).</p>
 
   <h2>13. Security</h2>
   <p>We use industry-standard security practices including:</p>
   <ul>
+    <li>On-device AES-256 encryption of audio recordings before upload, with service-managed keys (not zero-knowledge)</li>
     <li>Encryption at rest for all database content and file storage</li>
     <li>Encrypted connections (TLS/HTTPS) for all data in transit</li>
     <li>Row-level security policies scoped by family vault on all database tables</li>
@@ -351,38 +368,17 @@
   </ul>
   <p>In the event of a data breach affecting your personal information, we will notify affected users as required by applicable law.</p>
 
-  <div class="section-divider"></div>
-
-  <h2>14. International users and GDPR</h2>
-  <p>Remember Project is available globally. Data is stored in the United States (Oregon). By using the app, you acknowledge your data will be transferred to and stored in the United States, which may have different data protection standards than your country of residence.</p>
-
-  <h3>UK & EU users — UK GDPR / EU GDPR</h3>
-  <p>Lawful bases for processing: Contract (to deliver the service), Legitimate interests (security and stability), Consent (notifications and optional features).</p>
-  <p>Your rights: Access, Rectification, Erasure, Restriction, Portability, Object, and Withdraw consent. Contact <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>. We respond within 30 days. You may also lodge a complaint with your national supervisory authority — in the UK, the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank">ico.org.uk</a>.</p>
-
-  <h3>Australian users — Privacy Act 1988</h3>
-  <p>Right to access and correct personal information. Unresolved complaints may be referred to the Office of the Australian Information Commissioner (OAIC) at <a href="https://oaic.gov.au" target="_blank">oaic.gov.au</a>.</p>
-
-  <h3>Canadian users — PIPEDA</h3>
-  <p>Right to access personal information and challenge its accuracy. We collect only with consent and only for purposes a reasonable person would consider appropriate.</p>
-
-  <h3>All other international users</h3>
-  <p>Right to know, correct, delete, and opt out of any sale of personal information (we do not sell). Contact <a href="mailto:support@rememberproject.app">support@rememberproject.app</a>. Response within 30 days.</p>
-
-  <div class="section-divider"></div>
+  <h2>14. Geographic availability</h2>
+  <p>Remember Project is currently offered in the United States only. Data is stored in the United States (US West, Oregon). If you access the Service from outside the United States, you acknowledge that your data will be transferred to and stored in the United States, which may have different data protection standards than your country of residence.</p>
+  <p>If we make the Service available in other countries in the future, we will review and update this policy to describe the privacy rights that apply in those jurisdictions before launch there.</p>
 
   <h2>15. State-specific privacy rights (United States)</h2>
-
   <h3>California residents — CCPA / CPRA</h3>
   <p>Right to know, delete, correct, opt out of sale (we do not sell), non-discrimination, and limit use of sensitive personal information. Categories collected: identifiers (email, display name), audio recordings, text content (questions, reactions), photos. We do not sell or share any of these. Response within 45 days. Contact: <a href="mailto:support@rememberproject.app">support@rememberproject.app</a></p>
-
   <h3>Texas residents — TDPSA</h3>
   <p>Right to access, correct, delete, obtain a copy, and opt out of sale and targeted advertising. We do not sell data or engage in targeted advertising. Response within 45 days. Contact: <a href="mailto:support@rememberproject.app">support@rememberproject.app</a></p>
-
   <h3>Virginia, Colorado, Connecticut, Oregon and other states</h3>
   <p>We extend access, correction, deletion, portability, and opt-out rights to all users regardless of state. We do not sell personal data or engage in targeted advertising. Contact: <a href="mailto:support@rememberproject.app">support@rememberproject.app</a></p>
-
-  <div class="section-divider"></div>
 
   <h2>16. Your rights — all users</h2>
   <p>Regardless of location, you may contact us at any time to:</p>
