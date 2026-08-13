@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Don't Know How Much Time I Have — Remember Project</title>
+  <meta name="description" content="Six weeks after submitting the app, I still can't release it. Here's what the waiting taught me about the deadline I was actually running against." />
+  <meta property="og:title" content="I Don't Know How Much Time I Have" />
+  <meta property="og:description" content="Six weeks of forced waiting taught me the app was never the bottleneck. I was." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #F7F3EE;
+      --terracotta: #C17B5C;
+      --terracotta-light: #D4956F;
+      --ink: #2C1F14;
+      --muted: #8A7A68;
+      --faint: #E8DDD4;
+      --card: #FDFAF7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; border-radius: 2px; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(247,243,238,0.85);
+      border-bottom: 1px solid var(--faint);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: 'Lora', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--terracotta); }
+
+    /* HERO */
+    .hero {
+      padding: 120px 24px 64px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Lora', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .hero-title em { font-style: italic; color: var(--terracotta); }
+    .hero-meta { font-size: 13px; color: var(--muted); margin-bottom: 40px; }
+    .hero-divider {
+      width: 40px; height: 1px;
+      background: var(--terracotta);
+      opacity: 0.4;
+      margin-bottom: 40px;
+    }
+
+    /* BODY */
+    .post-body {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .post-body p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+    .post-body p.lead {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+    .post-body a { color: var(--terracotta); text-decoration: none; font-weight: 500; }
+    .post-body a:hover { text-decoration: underline; }
+    .post-body em { font-style: italic; }
+    .post-body strong { font-weight: 500; }
+
+    /* PULLQUOTE */
+    .pullquote {
+      border-left: 3px solid var(--terracotta);
+      margin: 40px 0;
+      padding: 4px 0 4px 28px;
+    }
+    .pullquote p {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 10px !important;
+    }
+    .pullquote cite {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* SECTION BREAK */
+    .section-break {
+      text-align: center;
+      margin: 48px 0;
+      color: var(--terracotta);
+      opacity: 0.5;
+      letter-spacing: 0.3em;
+      font-size: 12px;
+    }
+
+    /* STARTER QUESTIONS */
+    .starters {
+      background: var(--card);
+      border: 1px solid var(--faint);
+      border-radius: 12px;
+      padding: 8px 28px;
+      margin: 36px 0;
+      list-style: none;
+    }
+    .starters li {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink);
+      padding: 18px 0;
+      border-bottom: 1px solid var(--faint);
+      line-height: 1.5;
+    }
+    .starters li:last-child { border-bottom: none; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--faint);
+      padding: 32px 24px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .footer-author { display: flex; align-items: center; gap: 16px; }
+    .author-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Lora', serif;
+      font-size: 18px; font-weight: 600;
+      color: white; flex-shrink: 0;
+    }
+    .author-info p { font-size: 14px; margin-bottom: 2px; line-height: 1.4; }
+    .author-info .author-name { font-weight: 500; color: var(--ink); }
+    .author-info .author-role { color: var(--muted); font-size: 12px; }
+    .post-nav {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--faint);
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .post-nav a { color: var(--terracotta); text-decoration: none; font-weight: 500; }
+    .post-nav a:hover { text-decoration: underline; }
+    .copyright { margin-top: 32px; font-size: 11px; color: var(--muted); }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    @media (max-width: 600px) {
+      .hero { padding: 100px 20px 48px; }
+      .post-body { padding: 0 20px 60px; }
+      .starters { padding: 8px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="/">Remember Project</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>
+
+<article>
+  <div class="hero">
+    <p class="eyebrow">Founder's Note · August 13, 2026</p>
+    <h1 class="hero-title">I don't know<br>how much <em>time</em> I have</h1>
+    <p class="hero-meta">By Michael &nbsp;·&nbsp; 6 min read</p>
+    <div class="hero-divider"></div>
+  </div>
+
+  <div class="post-body">
+
+    <p class="lead">In June I wrote about the night I hit submit from a pizza place in Katy. What I didn't know was that I'd spend the rest of the summer unable to send Apple anything at all.</p>
+
+    <p>Here's what happened. I formed a company — the app should be published by a business, not by a guy — and started moving my Apple developer account from my personal name to the company's name. Routine paperwork. The kind of thing you do on a Tuesday and forget about.</p>
+
+    <p>The account went into a pending state on July 2. While it's pending, I can't sign a build. Can't send it to testers, can't send it to review, can't put it on anyone's phone. I've asked Apple about it five or six times. Every answer has been a version of "we're backed up." No date. No estimate.</p>
+
+    <p>So the app is finished, and it's sitting on my laptop, doing nothing.</p>
+
+    <p>I've been angry about this in the way you get angry at a slow line at the DMV. But somewhere in week three it turned into something else, and that's the part worth writing down.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>When I started building this, the deadline in my head was a launch date. Something I set. Something I could move if I needed to.</p>
+
+    <p>Six weeks of being unable to move it taught me that was never the real deadline.</p>
+
+    <p>You already know the numbers if you read <a href="/blog/SubmittingTheApp.html">the last post</a>. My dad is 82. My mom is 76. That's the actual clock, and it has been running the entire time. It does not care that my paperwork is in a queue. It doesn't pause because I did the responsible thing and incorporated. It doesn't extend because I'm frustrated.</p>
+
+    <p>I built this app because there is no recording of my grandparents' voices — not one second, not a voicemail, nothing. I've told that story already and I won't walk you through it again. What I want to tell you about is what six weeks of enforced stillness did to how I think about it.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>The Apple thing is temporary. It'll resolve. In a year this will be a funny story about a support queue.</p>
+
+    <p>What isn't temporary is what the waiting exposed. I had been treating "record my parents' stories" as a project with a launch date, when it was always a race against a number I don't get to see. Every week in that queue was a week I didn't get back. And it made something obvious that I had managed not to look at directly.</p>
+
+    <div class="pullquote">
+      <p>The app was never the bottleneck. I was.</p>
+    </div>
+
+    <p>I could have recorded my dad a year ago with a phone and a free voice memo app. I didn't. I built software instead — which is the thing I know how to do — and told myself that was the same as doing it.</p>
+
+    <p>It isn't. Building a tool to solve a problem is not the same as solving the problem. I got very good at preparing to act. Six weeks of not being allowed to ship broke that illusion pretty thoroughly.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>Here's why I'm telling you instead of keeping it to myself.</p>
+
+    <p>Most people's delay doesn't look like a developer account stuck in verification. It's simpler and worse: <em>I'll do it later.</em></p>
+
+    <p>Later at Thanksgiving. Later when they're feeling better. Later when I'm not so busy. Later when I figure out what to even ask.</p>
+
+    <p>I'm not going to tell you your parents are going to die soon, because I don't know that and neither do you. That's precisely the problem. Nobody gets the number. You find out what the number was afterward, and by then the only thing left to do about it is regret.</p>
+
+    <p>I've been the person putting it off. I had a better excuse than most — I was building the solution — and it was still an excuse.</p>
+
+    <div class="section-break">· · ·</div>
+
+    <p>So don't wait on me.</p>
+
+    <p>Open your phone. Open the voice memo app that's already on it. Sit down with whoever it is and ask them one question. Not their life story. One question.</p>
+
+    <ul class="starters">
+      <li>What did the kitchen smell like on a normal morning?</li>
+      <li>What was your father like when he was in a good mood?</li>
+      <li>What's something you did that your parents never found out about?</li>
+    </ul>
+
+    <p>Then let them talk and don't interrupt. That's the whole thing. The recording will be badly framed and the audio will be mediocre and in fifteen years it will be the most valuable file you own.</p>
+
+    <p>When my account finally clears, Remember Project will make this easier — better questions, everything in one place, the family able to ask from anywhere, the whole archive kept somewhere real instead of buried in a camera roll.</p>
+
+    <p>And I want the recordings you make this week to come with you. Whatever you capture now shouldn't be orphaned because you made it before the app existed. It's the same voice. It belongs in the same archive. That's how I'm building it.</p>
+
+    <p>I'm waiting on Apple. I've learned exactly what that's worth.</p>
+
+    <p>— Michael</p>
+    <p style="color: var(--muted); font-size: 14px; margin-top: -20px;">Founder, Remember Project<br>Second Chapter Technologies LLC</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="footer-author">
+    <div class="author-avatar">M</div>
+    <div class="author-info">
+      <p class="author-name">Michael Rivera</p>
+      <p class="author-role">Founder · Second Chapter Technologies LLC</p>
+    </div>
+  </div>
+  <div class="post-nav">
+    <a href="/blog">← All posts</a>
+    <a href="/">Remember Project →</a>
+  </div>
+  <p class="copyright">© 2026 Second Chapter Technologies LLC · Remember Project · rememberproject.app</p>
+</footer>
+
+</body>
+</html>
