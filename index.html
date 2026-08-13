@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Remember Project — Before it's too late.</title>
+<meta name="description" content="A private family voice archive. Ask the people you love one question at a time, and keep the answers in their own voice — before it's too late.">
+<meta property="og:title" content="Remember Project">
+<meta property="og:description" content="Do you remember what your grandparents' voices sounded like? A private family voice archive, built so the answer stays yes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rememberproject.app/">
+<meta property="og:image" content="https://rememberproject.app/images/subject-view.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -58,6 +65,31 @@
     text-decoration: none;
   }
   nav.scrolled .nav-logo { color: var(--walnut); }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .nav-link {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(247, 243, 238, 0.72);
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-link:hover { color: var(--cream); }
+  nav.scrolled .nav-link { color: var(--text-muted); }
+  nav.scrolled .nav-link:hover { color: var(--terracotta); }
+  .nav-link:focus-visible,
+  .nav-logo:focus-visible,
+  .footer-logo:focus-visible,
+  .footer-links a:focus-visible {
+    outline: 2px solid var(--terracotta);
+    outline-offset: 4px;
+    border-radius: 3px;
+  }
   .nav-cta {
     background: transparent;
     color: rgba(247, 243, 238, 0.55);
@@ -846,9 +878,17 @@
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+  /* ─── REDUCED MOTION ─── */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    nav, .nav-logo, .nav-link { transition: none; }
+  }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     nav { padding: 16px 24px; }
+    .nav-right { gap: 18px; }
     .moment, .how, .questions, .not-an-app, .urgency, .private, .cta-section { padding: 72px 24px; }
     .archive-promise { padding: 56px 24px; }
     footer { padding: 28px 24px; flex-direction: column; text-align: center; }
@@ -868,8 +908,11 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a class="nav-logo" href="#">Remember Project</a>
-  <a class="nav-cta" href="#">Coming Soon</a>
+  <a class="nav-logo" href="/">Remember Project</a>
+  <div class="nav-right">
+    <a class="nav-link" href="/blog/">Blog</a>
+    <span class="nav-cta">Coming Soon</span>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1126,10 +1169,11 @@
 
 <!-- FOOTER -->
 <footer>
-  <a class="footer-logo" href="#">Remember Project</a>
+  <a class="footer-logo" href="/">Remember Project</a>
   <div class="footer-links">
-    <a href="https://rememberproject.app/privacy.html">Privacy Policy</a>
-    <a href="https://rememberproject.app/terms.html">Terms of Service</a>
+    <a href="/blog/">Blog</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
     <a href="mailto:hello@rememberproject.app">Contact</a>
   </div>
   <span class="footer-tagline">© 2026 Second Chapter Technologies LLC · "Before it's too late."</span>
